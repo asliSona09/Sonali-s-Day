@@ -1,48 +1,78 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Happy BirthDay 😊</title>
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"><link rel="stylesheet" href="./style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday, Didi!</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+  body {
+    background-image: url('pic.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 10px; 
+    padding: 10px;
+  }
+</style>
 </head>
 <body>
-
-<div class="card">
-		<div class="imgBox">
-			<div class="bark"></div>
-			<img src="./main.jpg">
-		</div>
-		<div class="details">
-			<p>I will always be your biggest</p>
-			<p>fan and cheerleader.</p> 
-			<p>Happy birthday to the absolute </p>
-			<p>best sister in the world....</p>
-			<br>
-			<p>They say the older you get, </p>
-			<p>the wiser you become.</p> 
-			<p>Well, at this point you’re </p>
-			<p>one of the wisest people on earth.</p>
-			<p class="end color2 text-right">Happyyy Birthdayyy Didiiiiiiii</p>
-		</div>
-	</div>
-  <audio id="hoverSong" src="bday.mp3"></audio>
-
-<script>
-  const card = document.querySelector(".card");
-  const song = document.getElementById("hoverSong");
-
-  card.addEventListener("mouseenter", () => {
-    song.currentTime = 0; 
-    song.play();
-  });
-
-  card.addEventListener("mouseleave", () => {
-    song.pause();
-    song.currentTime = 0; 
-  });
-</script>
-
+  <div class="container">
+    <h1>🎉 Happy Birthday, Didi! 🎂</h1>
+    <p class="intro">An entire website made just for you, with memories and surprises from usss🌟</p>
+    <section>
+      <h2>💌 Special Messages</h2>
+      <div id="messages"></div>
+    </section>
+    <section>
+      <h2>📢 Voice Notes</h2>
+      <audio id="birthdayAudio" controls>
+        <source src="audio.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+      <div id="audioText" class="hidden-poem">
+        "In every laugh, in every call,<br>
+        Your kindness lifts me when you fall.<br>
+        Miles may stretch from here to you,<br>
+        But hearts stay close, forever true.<br>
+        Your words are calm, your smile a ray,<br>
+        You brighten even the cloudiest day.<br>
+        Sister, friend, a treasure so rare,<br>
+        My life is richer because you care.<br><br>
+        Happy birthday Didi,<br>
+        May joy surround you every year."
+      </div>
+	<audio id="birthdayAudio" controls>
+        <source src="audio.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+      <h2>🎤 Songs for You</h2>
+      <audio id="birthdayAudio" controls>
+        <source src="song.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+    <section>
+      <h2>🎬 Video Gifts</h2>
+      <video width="320" height="240" controls>
+        <source src="s.mp4" type="video/mp4" />
+      </video>
+    </section>
+    <section>
+      <h2>🧩 Birthday Puzzle</h2>
+      <button onclick="showPuzzle()">Click for your special puzzle!</button>
+      <div id="puzzle" style="display:none;">
+        <p>What has keys but can't open locks?</p>
+        <input type="text" id="puzzleAnswer"/>
+        <button onclick="checkAnswer()">Check Answer</button>
+        <p id="result"></p>
+      </div>
+    </section>
+    <footer>
+      <p>Made with love by your family &hearts; | 2025</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
