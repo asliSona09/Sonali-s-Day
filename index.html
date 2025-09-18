@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Happy BirthDay 😊</title>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+<div class="card">
+		<div class="imgBox">
+			<div class="bark"></div>
+			<img src="./main.jpg">
+		</div>
+		<div class="details">
+			<p>I will always be your biggest</p>
+			<p>fan and cheerleader.</p> 
+			<p>Happy birthday to the absolute </p>
+			<p>best sister in the world....</p>
+			<br>
+			<p>They say the older you get, </p>
+			<p>the wiser you become.</p> 
+			<p>Well, at this point you’re </p>
+			<p>one of the wisest people on earth.</p>
+			<p class="end color2 text-right">Happyyy Birthdayyy Didiiiiiiii</p>
+		</div>
+	</div>
+  <audio id="hoverSong" src="bday.mp3"></audio>
+
+<script>
+  const card = document.querySelector(".card");
+  const song = document.getElementById("hoverSong");
+
+  card.addEventListener("mouseenter", () => {
+    song.currentTime = 0; 
+    song.play();
+  });
+
+  card.addEventListener("mouseleave", () => {
+    song.pause();
+    song.currentTime = 0; 
+  });
+</script>
+
+</body>
+</html>
