@@ -4,21 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Happy Birthday, Didi!</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico&family=Quicksand:wght@400;600&display=swap">
+
   <style>
-  body {
-    background-image: url('pic.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Segoe UI', sans-serif;
-    margin: 10px; 
-    padding: 10px;
-  }
+  .bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  overflow: hidden;
+}
+
+.bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position:70% 15% ;
+}
+h1 {
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  font-family: 'Pacifico', cursive;
+}
+p {
+  font-family: 'Quicksand', cursive;
+  font-size: 15px;
+}
+.hidden-poem {
+  left: 50px;
+  line-height: 1.6;
+  font-family: 'Quicksand', cursive;
+  font-size: 15px;
+  font-weight: 300;
+}
 </style>
 </head>
 <body>
+  <div class="bg">
+  <img src="pic.jpg" alt="Background">
+</div>
   <div class="container">
     <h1>🎉 Happy Birthday, Didi! 🎂</h1>
     <p class="intro">An entire website made just for you, with memories and surprises from usss🌟</p>
@@ -32,8 +56,9 @@
         <source src="audio.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>
+    
       <div id="audioText" class="hidden-poem">
-        "In every laugh, in every call,<br>
+        " In every laugh, in every call,<br>
         Your kindness lifts me when you fall.<br>
         Miles may stretch from here to you,<br>
         But hearts stay close, forever true.<br>
@@ -42,7 +67,7 @@
         Sister, friend, a treasure so rare,<br>
         My life is richer because you care.<br><br>
         Happy birthday Didi,<br>
-        May joy surround you every year."
+        May joy surround you every year. "
       </div>
 	<audio id="birthdayAudio" controls>
         <source src="audio.mp3" type="audio/mp3" />
